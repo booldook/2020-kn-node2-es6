@@ -63,4 +63,42 @@ const fn3 = a => a + 10;
 console.log(fn3(30));
 fn();
 fn2();
+
+const obj4 = {
+	name: "홍길동",
+	age: 29,
+}
+console.log(Object.keys(obj4));
+console.log(Object.values(obj4));
+for(let [key, value] of Object.entries(obj4)) {
+	console.log(`${key}: ${value}`);
+}
+
+// SET
+const set = new Set();
+set.add("A");
+set.add("A");
+set.add("B");
+set.add("C");
+set.add("C");
+console.log(set);
+console.log(set.size);
+console.log(set.has('A'));
+
+//Map
+const map = new Map();
+map.set("k1", "홍길동");
+map.set(0, 22);
+map.set(1, () => {});
+map.set("k2", "홍길만");
+for(let [key, value] of map) {
+	console.log(`${key}: ${value}`);
+}
+for(let key of map.keys()) {
+	console.log(key);
+}
+for (let v of map.values()) {
+	console.log(v);
+}
+console.log(map.get("k2"));
 </script>

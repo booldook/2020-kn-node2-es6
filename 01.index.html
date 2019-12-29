@@ -20,4 +20,44 @@
 	// reference type: Object, Array
 	e[0] = 10;
 	e[1] = 20;
+
+	const arr = [1,2,3,4,5];
+	/*
+	const arr2 = arr;
+	arr[3] = 30;
+	console.log(arr);
+	console.log(arr2);
+	*/
+	const arr2 = arr.map(function(item){
+		return item * 2;
+	});
+	console.log(arr, arr2);
+
+	const arr3 = [
+		{name: "hong", age: 25},
+		{name: "hong2", age: 27},
+		{name: "hong3", age: 45},
+		{name: "hong4", age: 32},
+	];
+
+	const arr4 = arr3.filter(function(item){
+		if(item.age < 30) return item;
+	});
+	console.log(arr3);
+	console.log(arr4);
+
+	for(let i=0; i<arr3.length; i++) {
+
+	}
+	for(let i in arr) {
+		console.log(arr[i]);
+	}
+	for(let v of arr) {
+		console.log(v);
+	}
+	console.clear();
+	arr3.forEach(function(v, i){
+		console.log(v, i);
+	});
+
 </script>
